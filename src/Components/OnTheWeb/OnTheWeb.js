@@ -2,12 +2,13 @@ import React from "react";
 import SocialCard from "./SocialCard";
 import { AiFillLinkedin } from "react-icons/ai";
 import EditButton from "../EditButton";
+import Heading from "../Fonts/Heading";
 
 function OnTheWeb() {
   return (
     <div>
       <div className="flex py-4">
-        <h1>On The Web</h1>
+        <Heading text="On the Web" />
         <div className="ml-auto">
           <EditButton />
         </div>

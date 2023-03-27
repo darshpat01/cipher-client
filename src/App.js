@@ -6,17 +6,19 @@ import CipherMap from "./Components/CipherMap/CipherMap";
 import OnTheWeb from "./Components/OnTheWeb/OnTheWeb";
 import Professional from "./Components/Body/Professional/Professional";
 import Interests from "./Components/Body/Interests/Interests";
+import Password from "./Components/Body/Password/Password";
 
 function App() {
   return (
     <ChakraProvider>
       <div className="App">
         <Header />
-        <div className="px-4">
+        <div className="px-4 bg-[#f3f5f9]">
           <AboutMe />
           <CipherMap />
           <OnTheWeb />
           <Professional />
+          <Password />
           <Interests />
         </div>
       </div>

@@ -1,12 +1,13 @@
 import React from "react";
 import { Textarea } from "@chakra-ui/react";
 import EditButton from "../EditButton";
+import Heading from "../Fonts/Heading";
 
 function AboutMe() {
   return (
     <div>
       <div className="flex py-4">
-        <h1>About Me</h1>
+        <Heading text="About Me" />
         <div className="ml-auto">
           <EditButton />
         </div>

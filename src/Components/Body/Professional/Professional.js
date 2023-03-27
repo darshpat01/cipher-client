@@ -1,12 +1,13 @@
 import React from "react";
 import { Select } from "@chakra-ui/react";
 import EditButton from "../../EditButton";
+import Heading from "../../Fonts/Heading";
 
 function Professional() {
   return (
     <div className="py-4">
       <div className="flex py-4">
-        <h1>Professional Information</h1>
+        <Heading text="Professional Information" />
         <div className="ml-auto">
           <EditButton />
         </div>
