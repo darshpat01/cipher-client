@@ -3,7 +3,7 @@ import React from "react";
 function Header() {
   return (
     <>
-      <div className="bg-orange-500 text-white py-4 px-2">
+      <div className="bg-orange-500 text-white py-4 px-6">
         <div className="flex items-center">
           <div className="rounded-full overflow-hidden w-20 h-20">
             <img
@@ -18,6 +18,9 @@ function Header() {
           </div>
           <div className="ml-auto">
             <p>10 Followers</p>
+            <div>
+              <button>Logout</button>
+            </div>
           </div>
         </div>
       </div>

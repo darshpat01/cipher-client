@@ -12,8 +12,9 @@ function AboutMe() {
           <EditButton />
         </div>
       </div>
-
-      <Textarea placeholder="Add something about you" />
+      <div className="bg-white">
+        <Textarea placeholder="Add something about you" />
+      </div>
     </div>
   );
 }

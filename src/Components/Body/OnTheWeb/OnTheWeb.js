@@ -1,8 +1,8 @@
 import React from "react";
 import SocialCard from "./SocialCard";
 import { AiFillLinkedin } from "react-icons/ai";
-import EditButton from "../EditButton";
-import Heading from "../Fonts/Heading";
+import EditButton from "../../EditButton";
+import Heading from "../../Fonts/Heading";
 
 function OnTheWeb() {
   return (

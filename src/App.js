@@ -1,27 +1,32 @@
 import "./App.css";
-import AboutMe from "./Components/Body/AboutMe";
-import Header from "./Components/Header";
 import { ChakraProvider } from "@chakra-ui/react";
-import CipherMap from "./Components/CipherMap/CipherMap";
-import OnTheWeb from "./Components/OnTheWeb/OnTheWeb";
-import Professional from "./Components/Body/Professional/Professional";
-import Interests from "./Components/Body/Interests/Interests";
-import Password from "./Components/Body/Password/Password";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ProfilePage from "./Pages/ProfilePage";
+
+const router = createBrowserRouter([
+  {
+    path: "/login",
+    element: <Login />,
+    errorElement: <div>404</div>,
+  },
+  {
+    path: "/register",
+    element: <Register />,
+    errorElement: <div>404</div>,
+  },
+  {
+    path: "/profile",
+    element: <ProfilePage />,
+    errorElement: <div>404</div>,
+  },
+]);
 
 function App() {
   return (
     <ChakraProvider>
-      <div className="App">
-        <Header />
-        <div className="px-4 bg-[#f3f5f9]">
-          <AboutMe />
-          <CipherMap />
-          <OnTheWeb />
-          <Professional />
-          <Password />
-          <Interests />
-        </div>
-      </div>
+      <RouterProvider router={router} />
     </ChakraProvider>
   );
 }
