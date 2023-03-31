@@ -1,6 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import AuthContext from "../store/auth-context";
+import { useContext } from "react";
 
 function Header() {
+  const authCtx = useContext(AuthContext);
+  const logout = () => {
+    authCtx.logout();
+  };
   return (
     <>
       <div className="bg-orange-500 text-white py-4 px-6">
@@ -13,13 +20,15 @@ function Header() {
           </div>
           <div className="pl-2">
             <p>Hello,</p>
-            <p>Test User</p>
-            <p>testuser@gmail.com</p>
+            <p className="capitalize">{authCtx.name}</p>
+            <p>{authCtx.email}</p>
           </div>
           <div className="ml-auto">
             <p>10 Followers</p>
             <div>
-              <button>Logout</button>
+              <Link to="/login" onClick={logout}>
+                Logout
+              </Link>
             </div>
           </div>
         </div>
