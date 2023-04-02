@@ -20,7 +20,7 @@ function AboutMe() {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "http://localhost:3009/getUserDetails",
+      url: "https://cipher-7phw.onrender.com/getUserDetails",
       headers: {
         Authorization: `Bearer ${authCtx.token}`,
         "Content-Type": "application/json",
@@ -49,7 +49,7 @@ function AboutMe() {
       let config = {
         method: "patch",
         maxBodyLength: Infinity,
-        url: "http://localhost:3009/updateUser",
+        url: "https://cipher-7phw.onrender.com/updateUser",
         headers: {
           Authorization: `Bearer ${authCtx.token}`,
           "Content-Type": "application/json",

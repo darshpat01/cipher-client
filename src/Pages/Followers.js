@@ -13,6 +13,12 @@ function Followers() {
             <FollowerCard />
             <FollowerCard />
             <FollowerCard />
+            <FollowerCard />
+            <FollowerCard />
+            <FollowerCard />
+            <FollowerCard />
+            <FollowerCard />
+            <FollowerCard />
           </div>
         </div>
       </div>

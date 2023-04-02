@@ -3,7 +3,7 @@ import React from "react";
 function FollowerCard() {
   return (
     <>
-      <div className="flex-col p-4 bg-slate-500 mx-2 rounded-md text-white">
+      <div className="flex-col p-4 bg-slate-500 mx-2 rounded-md text-white m-2">
         <div className="pb-2 px-5 justify-items-center">
           <img
             className="rounded-full h-20 w-20"

@@ -8,6 +8,10 @@ import axios from "axios";
 
 function Professional() {
   const authCtx = useContext(AuthContext);
+  const [isEditing, setIsEditing] = useState(false);
+  const editHandler = () => {
+    setIsEditing((prevState) => !prevState);
+  };
 
   const [highestEducation, setHighestEducation] = useState("");
   const [occupation, setOccupation] = useState("");
@@ -44,7 +48,10 @@ function Professional() {
       <div className="flex py-4">
         <Heading text="Professional Information" />
         <div className="ml-auto">
-          <EditButton />
+          <EditButton
+            text={!isEditing ? "edit" : "save"}
+            onClick={editHandler}
+          />
         </div>
       </div>
       <div className="flex">

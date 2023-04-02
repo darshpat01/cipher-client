@@ -8,6 +8,12 @@ import AuthContext from "../../../store/auth-context";
 
 function Interests() {
   const authCtx = useContext(AuthContext);
+  const [isEditing, setIsEditing] = useState(false);
+
+  const onClickHandler = () => {
+    setIsEditing((prevState) => !prevState);
+  };
+
   const [interests, setInterests] = useState([]);
   useEffect(() => {
     let data = JSON.stringify({
@@ -40,7 +46,10 @@ function Interests() {
       <div className="flex py-4">
         <Heading text="Interests" />
         <div className="ml-auto">
-          <EditButton />
+          <EditButton
+            text={!isEditing ? "edit" : "save"}
+            onClick={onClickHandler}
+          />
         </div>
       </div>
       <div className="flex py-4 flex-wrap">
