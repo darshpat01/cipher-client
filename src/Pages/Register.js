@@ -21,7 +21,7 @@ function Register() {
   const onSubmitHandler = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3009/register", {
+      .post("https://cipher-7phw.onrender.com/register", {
         name: name,
         email: email,
         password: password,
