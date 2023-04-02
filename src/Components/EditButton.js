@@ -1,11 +1,11 @@
 import React from "react";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 
-function EditButton({ className, onClick, children }) {
+function EditButton({ className, onClick, text, children }) {
   return (
     <div className={className}>
       <Button colorScheme="orange" onClick={onClick}>
-        Edit
+        <p className="uppercase">{text}</p>
       </Button>
     </div>
   );

@@ -38,12 +38,44 @@ function AboutMe() {
       });
   }, [authCtx.token, authCtx.email]);
 
+  const editHandler = () => {
+    setIsEditing((prevState) => !prevState);
+    if (isEditing) {
+      let data = JSON.stringify({
+        email: `${authCtx.email}`,
+        about: aboutMe,
+      });
+
+      let config = {
+        method: "patch",
+        maxBodyLength: Infinity,
+        url: "http://localhost:3009/updateUser",
+        headers: {
+          Authorization: `Bearer ${authCtx.token}`,
+          "Content-Type": "application/json",
+        },
+        data: data,
+      };
+
+      axios(config)
+        .then(function (response) {
+          console.log(JSON.stringify(response.data));
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+  };
+
   return (
     <div>
       <div className="flex py-4">
         <Heading text="About Me" />
         <div className="ml-auto">
-          <EditButton />
+          <EditButton
+            text={!isEditing ? "edit" : "save"}
+            onClick={editHandler}
+          />
         </div>
       </div>
       <div className="bg-white">
@@ -51,6 +83,7 @@ function AboutMe() {
           placeholder="Add something about you"
           value={aboutMe}
           readOnly={!isEditing}
+          onChange={(e) => setAboutMe(e.target.value)}
         />
       </div>
     </div>
