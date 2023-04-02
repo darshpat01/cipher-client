@@ -6,6 +6,7 @@ import Register from "./Pages/Register";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ProfilePage from "./Pages/ProfilePage";
 import AuthContext from "./store/auth-context";
+import Followers from "./Pages/Followers";
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -24,6 +25,11 @@ function App() {
     {
       path: "/profile",
       element: authCtx.isLoggedIn ? <ProfilePage /> : <Login />,
+      errorElement: <div>404</div>,
+    },
+    {
+      path: "/followers",
+      element: authCtx.isLoggedIn ? <Followers /> : <Login />,
       errorElement: <div>404</div>,
     },
   ]);

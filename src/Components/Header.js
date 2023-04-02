@@ -24,7 +24,7 @@ function Header() {
             <p>{authCtx.email}</p>
           </div>
           <div className="ml-auto">
-            <p>10 Followers</p>
+            <Link to="/followers">10 Followers</Link>
             <div>
               <Link to="/login" onClick={logout}>
                 Logout

@@ -13,7 +13,7 @@ function Password() {
         </div>
       </div>
       <div>
-        <Input type="password" />
+        <Input type="password" value="................" />
       </div>
     </>
   );

@@ -11,7 +11,7 @@ function ProfilePage() {
   return (
     <div>
       <Header />
-      <div className="px-4 bg-[#f3f5f9]">
+      <div className=" px-4 bg-[#f3f5f9]">
         <AboutMe />
         <CipherMap />
         <OnTheWeb />
