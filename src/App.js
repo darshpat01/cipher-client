@@ -13,6 +13,11 @@ function App() {
   console.log(authCtx.isLoggedIn);
   const router = createBrowserRouter([
     {
+      path: "/",
+      element: <Login />,
+      errorElement: <div>404</div>,
+    },
+    {
       path: "/login",
       element: <Login />,
       errorElement: <div>404</div>,
