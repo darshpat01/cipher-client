@@ -29,17 +29,18 @@ function Register() {
       .then((res) => {
         // check if response is 200
         if (res.status === 200) {
-          // navigate to dashboard
           console.log("Success");
-          localStorage.setItem("token", res.token);
-          localStorage.setItem("userName", res.user.name);
-          localStorage.setItem("userEmail", res.user.email);
+
+          localStorage.setItem("token", res.data.token);
+          localStorage.setItem("userName", res.data.user.name);
+          localStorage.setItem("userEmail", res.data.user.email);
           navigate("/profile");
         } else {
           console.log("Unable to Register");
         }
       })
       .catch((err) => {
+        console.log(err);
         alert("Invalid Details");
       });
   };
